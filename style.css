@@ -1,0 +1,256 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nanum+Pen+Script&display=swap');
+:root {
+    font-family: "Inter", sans-serif;
+     /* Basic colors */
+    --black: #0D0D0D;
+    --white:  #FFF;
+    --onyx: #181818;
+    --dark-gray: #808080;
+    --medium-gray: rgba(128, 128, 128, 0.5);
+    --light-gray: #c5c5c5;
+    --light-blue: rgba(63, 100, 234, 0.43);
+    --light-red: rgba(233, 63, 64, 0.43);
+    --light-yellow: rgba(255, 184, 0, 0.43); 
+    /* light mode colors */
+    --main-bg: #fbfbfb;
+    --faint-white: #f3f3f3;
+    --card-border: #ebebeb;
+    --card-bg: #f6f6f6;
+    --black-10: rgb(21,21,21,0.1);
+}        
+
+:root.dark {
+    /* black mode colors */
+    --main-bg: #fbfbfb;
+    --faint-white: #f3f3f3;
+    --card-border: #383737; 
+    --card-bg: #f6f6f6;
+    --black-50: rgb(255,255,255,0.7); 
+}
+
+
+body {
+    display: flex;
+    margin: 0;
+    background: #080404;
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#sec1 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0px 90px;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 4.0rem;
+    margin-top: 0px;
+}
+
+#sec1 p {
+    color: var(--dark-gray);
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+#sec1 h1 span {
+    color: var(--dark-gray);
+}
+
+#sec1 button {
+    font-family: "Inter", sans-serif;
+    border: none;
+    background-color: var(--onyx);
+    color: var(--faint-white);
+    border-radius: 9px;
+    padding: 16px 32px;
+    font-size: 1.02rem;
+}
+
+#left {
+    flex: 1;
+}
+
+.cards {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    background-color: var(--onyx);
+    border-radius: 9px;
+    padding: 50px; 
+    flex-direction: column;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media (min-width: 1790px){
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+}
+
+@media (max-width: 1288px){
+    #sec1 {
+        flex-wrap: none;
+        flex-direction: column;
+    }
+}
+
+.card h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin-top: 0px;
+}
+
+
+.card img {
+    flex: 2;   
+    border-radius: 9px;
+    width: auto;
+    height: auto;
+}
+
+
+.card-section h2 {
+    color: var(--dark-gray);
+    margin:0px;
+    margin-bottom: 10px;
+}
+
+.card-section h1 {
+    margin:0px;
+    margin-bottom: 5px;
+}
+
+.card-section h3 {
+    color: var(--dark-gray);
+}
+
+.card-section {
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 90px;
+    align-self: flex-start;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.card-section .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-section .card {
+    text-align: left;
+    cursor: default;
+}
+
+.card-section p {
+    color: white;
+}
+
+.homeBtn {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.homeBtn img {
+    width: 30px;
+    height: auto;
+}
+
+#tech-stack-sec .card {
+    display: flex;  
+}
+
+#tech-stack-sec h3 {
+    text-align: center;
+    color: var(--faint-white);
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.content-set {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+
+#content > div {
+    transition: background-color 0.3s;
+}
+
+#content > div:hover {
+    background-color: #434343;
+}
+
+#content > div {
+    background-color: #282828;
+    padding: 30px;
+    border-radius: 9px;
+}
+
+#content svg {
+    width: 90px;
+    height: 90px;
+}
+
+@media (max-width: 600px){
+    #content > div {
+        padding: 10px;
+    }
+
+    #content h3 {
+        font-size: 0.9rem;
+    }
+
+    .card-section {
+        padding: 0px;
+    }
+
+}
+
+#content .content-card  {
+    text-align: center;
+}
+
+  
+
+
