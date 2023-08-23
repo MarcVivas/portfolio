@@ -27,11 +27,14 @@ function showTechStack(e){
 
 function showProjects(e){
     currentSection.style.display = "none";
-
+    currentSection = document.querySelector("#projects-sec");
+    currentSection.style.display = "flex";
 }
 
 function showGetInTouch(e){
     currentSection.style.display = "none";
+    currentSection = document.querySelector("#contact-sec");
+    currentSection.style.display = "flex";
 
 }
 
